@@ -44,7 +44,14 @@ return {
     -- customize language server configuration options passed to `lspconfig`
     ---@diagnostic disable: missing-fields
     config = {
-      -- clangd = { capabilities = { offsetEncoding = "utf-8" } },
+      -- clangd = {
+      --   -- capabilities = { offsetEncoding = "utf-8" },
+      --
+      --   -- let clangd parse header search paths from compilers
+      --   -- See: https://clangd.llvm.org/guides/system-headers#query-driver
+      --   -- WARN: it implies executing ARBITRARY binaries
+      --   -- cmd = { 'clangd', '--query-driver=/usr/bin/*gcc' }
+      -- },
     },
     -- customize how language servers are attached
     handlers = {
